@@ -1,0 +1,17 @@
+<ion-modal-view id="exam-theory_modal" class="full-modal" >
+    <ion-header-bar>
+        <h1 class="title">Theorie Prüfungs</h1>
+    </ion-header-bar>
+    <a class="button app-button-default primary-modal-button" mean="date" >29.07.2015</a>
+    <div id="theory-action-bar" >
+        <div class="main"><a class="button app-button-default dropdown">alle</a></div>
+        <div class="sub"><a class="button app-button-default dropdown">Anhalter, Antonia</a></div>
+        <div class="tail"><a class="button app-button-default" ng-click="open_exam_theory_edit()" >+</a></div>
+    </div>
+    <ion-content>
+        <ion-item collection-repeat="item in test.items" class="app-button-black button color-silver theory-item"  item-height="50px" item-width="100%">
+            {{item.text}}
+            <span class="pin">nd</span>
+        </ion-item>
+    </ion-content>
+</ion-modal-view>

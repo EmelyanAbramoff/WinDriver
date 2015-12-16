@@ -1,0 +1,25 @@
+<ion-modal-view id="payment_edit_modal" class="full-modal">
+    <ion-header-bar>
+        <h1 class="title">Zahlungen bearbeiten</h1>
+    </ion-header-bar>
+    <ion-content>
+        <p class="text-title">Anhalter, Antonia</p>
+        <div class="input-line"><!--
+            --><span class="input-line-text">Datum</span><!--
+            --><a class="button app-button-default">29.07.2015</a>
+        </div>
+        <div class="input-line"><!--
+            --><span class="input-line-text">Betrag</span><!--
+            --><input class="input-line-input app-input-default" type="text" value="0.00" />
+        </div>
+        <div class="input-line"><!--
+            --><span class="input-line-text">Steuer</span><!--
+            --><a class="button app-button-default dropdown">Tuv/StvA-Geb. 0.00%</a>
+        </div>
+        <p class="text-title">Zahlaert Bar</p>
+        <div class="action-line">
+            <a class="button app-button-default line-action-left" ng-click="close_payment_edit()" >Speichern</a>
+            <a class="button app-button-default line-action-right" ng-click="close_payment_edit()">Abbrechen</a>
+        </div>
+    </ion-content>
+</ion-modal-view>

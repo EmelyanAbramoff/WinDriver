@@ -1,0 +1,32 @@
+<ion-modal-view id="other_activity_edit_modal" class="full-modal">
+    <ion-header-bar>
+        <h1 class="title">Sonstige Tätigkeit eingeben</h1>
+    </ion-header-bar>
+    <div class="container" >
+        <p class="prefix-line">22.08.2015, 14:45, 90 min</p>
+        <p class="color-blue prefix-line">Grundunterricht</p>
+        <p class="color-silver prefix-line">Keine Angabe</p>
+        <div class="full-line table-line name">
+            <div class="name-prefix"><a class="button app-button-default dropdown">alle</a></div>
+            <div class="name-suffix"><a class="button app-button-default dropdown">Anhalter, Antonia, B</a></div>
+            <div class="name-menu"><a class="button app-button-default" ng-click="on_click_add_oae_item()">+</a></div>
+        </div>
+        <ion-content>
+            <ion-item collection-repeat="item in test.items" class="oae-item" ng-click="item.checked=!item.checked" >
+                Anhalter Antonia
+                <div class="button app-button-checkbox" ng-class="{checked: item.checked }" ><span class="mark"></span></div>
+            </ion-item>
+        </ion-content>
+        <div class="suffix-line">
+            <div class="full-line table-line action-line">
+                <a class="button app-button-default line-action-left" ng-click="" >Kopieren</a>
+                <a class="button app-button-default line-action-right" ng-click="" >Einfügen</a>
+                <a class="button app-button-default line-action-center" ng-click="on_click_delete_oae_item()" >Löschen</a>
+            </div>
+            <div class="full-line table-line action-line">
+                <a class="button app-button-default line-action-left" ng-click="close_other_activity_edit()" >Speichern</a>
+                <a class="button app-button-default line-action-right" ng-click="close_other_activity_edit()" >Abbrechen</a>
+            </div>
+        </div>
+    </div>
+</ion-modal-view>

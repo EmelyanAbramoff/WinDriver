@@ -1,0 +1,28 @@
+<ion-modal-view id="exam_theory_edit_modal" class="full-modal">
+    <ion-header-bar>
+        <h1 class="title">Prüfungs eingeben</h1>
+    </ion-header-bar>
+    <ion-content>
+        <p class="text-title label-line">Anhalter, Antonia</p>
+        <div class="input-line"><!--
+            --><span class="input-line-text">Datum</span><!--
+            --><span class="input-line-value">29.07.2015</span>
+        </div>
+        <div class="input-line"><!--
+            --><span class="input-line-text">Klasse</span><!--
+            --><a class="button app-button-default dropdown">B</a>
+        </div>
+        <div class="input-line"><!--
+            --><span class="input-line-text">Ergebnis</span><!--
+            --><a class="button app-button-default dropdown">nicht durchgefuhrt</a>
+        </div>
+        <div class="input-line"><!--
+            --><span class="input-line-text">Punkte</span><!--
+            --><input class="input-line-input app-input-default" type="text" value="0" />
+        </div>
+        <div class="action-line">
+            <a class="button app-button-default line-action-left" ng-click="close_exam_theory_edit()" >Speichern</a>
+            <a class="button app-button-default line-action-right" ng-click="close_exam_theory_edit()">Abbrechen</a>
+        </div>
+    </ion-content>
+</ion-modal-view>

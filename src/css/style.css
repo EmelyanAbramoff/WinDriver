@@ -1,0 +1,1045 @@
+/* Empty. Add your own CSS if you like */
+*{     box-sizing: border-box; }
+input{ text-align: left; }
+.visible{
+    visibility: visible !important;
+}
+.hidden{
+    visibility: hidden !important;
+}
+.pane, .view{
+    background: black;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.color-gold{
+    color: #fdf39a;
+}
+.color-silver{
+    color: #bdbdbd !important;
+}
+.color-red{
+    color: rgb(215,0,26);
+}
+.color-green{
+    color: #5f8700;
+}
+.color-blue{
+    color: #0087ff;
+}
+.color-white{
+    color: #ffffff;
+}
+.color-gray{
+    color: rgb(135,136,138);
+}
+.bold{
+    font-weight: bold;
+}
+.button{
+    max-width: none ;
+    max-height: none;
+    min-height: 0px;
+    min-width: 0px;
+}
+.toolbar-category{
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+    z-index: 5;
+    background: black;
+}
+.toolbar-category *{vertical-align: middle;}
+.toolbar-category >.toolbar-category-item{
+    display: table-cell;
+    position: relative;
+    padding: 0 4px;
+}
+.toolbar-category >.toolbar-category-item.main{
+    width: 1in;
+    position:relative;
+}
+.toolbar-category >.toolbar-category-item.main:before{
+    display: block;
+    content: "";
+    width: 100%;
+    height: 40px;
+}
+.toolbar-category >.toolbar-category-item .button-con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 4px; 
+}
+.toolbar-category >.toolbar-category-item.info{
+    width: 0.47in;
+}
+.toolbar-category .toolbar-category-item .button{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    border: 0px;
+    padding: 0px;
+}
+.app-input-default{
+    border: 0px;
+    border-radius: 2px;
+    padding: 5px !important;
+    color: black !important;
+    /*text-align: right;*/
+    font-size: 18px !important;
+}
+.app-input-default:focus{
+    border: 3px solid #f17603 !important;
+}
+.app-button-default{
+    background: linear-gradient( 90deg, #d5d5d5, #c7c7c7, #d5d5d5);
+    background: -webkit-linear-gradient( 90deg, #d5d5d5, #c7c7c7, #d5d5d5);
+    background: -moz-linear-linear-gradient( 90deg, #d5d5d5, #c7c7c7, #d5d5d5);
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    color: black !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.app-button-default.activated{
+    background: linear-gradient(90deg, #fea209, #feb620, #fea209);
+    background: -webkit-linear-gradient(90deg, #fea209, #feb620, #fea209);
+    background: -moz-linear-gradient(90deg, #fea209, #feb620, #fea209);
+    border: 1px solid #a97519;
+}
+
+.app-button-black{
+    background: linear-gradient( 90deg, #191919, #272826, #393b38);
+    background: -webkit-linear-gradient( 90deg, #191919, #272826, #393b38);
+    background: -moz-linear-linear-gradient( 90deg, #191919, #272826, #393b38);
+    border: 0px;
+    border-top: 1px solid #232323;
+    border-bottom: 1px solid #181818;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+.app-button-black.activated{
+    background: linear-gradient( 90deg, #293b00, #374f00, #436000 );
+    background: -webkit-linear-gradient( 90deg, #293b00, #374f00, #436000 );
+    background: -moz-linear-linear-gradient( 90deg, #293b00, #374f00, #293b00 );
+    border-top: 1px solid #293b00;
+    border-bottom: 1px solid #293b00;
+}
+
+.app-button-icon{
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
+}
+
+.app-button-icon.activated{
+    background-color: transparent;
+    opacity: 0.5;
+}
+
+.app-button-checkbox{
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    background-color: #262626;
+    border: 2px solid #676767;
+}
+
+.app-button-checkbox:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 2px solid #000000;
+}
+
+.app-button-checkbox .mark{
+
+}
+
+.app-button-checkbox.checked .mark{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    background-image: url(../img/check.png);
+    left: 50%;
+    margin-left: -10px;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.app-button-checkbox.activated{
+    background-color: #ee9b27 !important;
+}
+
+.button.dropdown{
+    text-align: left;
+    padding: 0 15% 0 12px !important;
+}
+
+.button.dropdown:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 8px;
+    background: url(../img/mark_down.png);
+    top: 50%;
+    left: 100%;
+    margin-left: -28px;
+    margin-top: -4px;
+}
+.toolbar-category .toolbar-category-item.info img{
+    max-width: 130%;
+    max-height: 120%;
+    margin-left: -4px;
+    margin-top: -2px;
+}
+.toolbar-category .toolbar-category-item.info .button{
+    display: inline;
+}
+
+.photo{
+    color: white;
+    height: 100px;
+}
+.toolbar-day{
+    position: relative;
+    z-index: 4;
+    background: black;
+}
+.toolbar-day:before{
+    content: '';
+    display: block;
+    height: 60px;
+}
+.toolbar-day ion-scroll{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    right: 0px;
+    bottom: 9px;
+}
+
+.toolbar-day ion-scroll:before{
+    content: "";
+    display: block;
+    left: 0px;
+    top: -3px;
+    bottom: -3px;
+    width: 20px;
+    position: absolute;
+    box-shadow: inset 21px 0px 15px -12px #000000;
+    -webkit-box-shadow: inset 21px 0px 15px -12px #000000;
+    -moz-box-shadow: inset 21px 0px 15px -12px #000000;
+    z-index: 2;
+}
+
+.toolbar-day ion-scroll:after{
+    content: "";
+    display: block;
+    right: 0px;
+    top: -10px;
+    bottom: -3px;
+    width: 20px;
+    position: absolute;
+    box-shadow: inset -21px 0px 15px -12px #000000;
+    z-index: 2;
+}
+
+.toolbar-day ion-item{
+    padding: 0 4px;
+    border: 0px;
+    background: transparent;
+    width: 1in;
+}
+
+.toolbar-day .toolbar-day-item{
+    width: 100%;
+    height: 100%;
+    line-height: 42px;
+    font-size: 15px;
+    padding: 0px;
+
+}
+
+.content-main{
+    position: absolute;
+    bottom: 73px;
+    left: 0px;
+    right: 0px;
+    top: 100px;
+    /*padding-top: 100px;
+    margin-bottom: 19.44%;*/
+}
+.content-main:before{
+    /*content: "";*/
+    display: block;
+    left: 0px;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    box-shadow: inset 0px 21px 12px -12px #000000;
+    -webkit-box-shadow: inset 0px 21px 12px -12px #000000;
+    -moz-box-shadow: inset 0px 21px 12px -12px #000000;
+    z-index: 2;
+}
+.content-main:after{
+    /*content: "";*/
+    display: block;
+    left: 0px;
+    bottom: 0px;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    box-shadow: inset 0px -21px 12px -12px #000000;
+    -webkit-box-shadow: inset 0px -21px 12px -12px #000000;
+    -moz-box-shadow: inset 0px -21px 12px -12px #000000;
+    z-index: 2;
+}
+.content-main ion-item{
+    line-height: 33px;
+    font-size: 16px;
+    color: #5f8700 !important;
+    width: 100%;
+    text-align: left;
+    height: 0.42in;
+}
+.content-main ion-item:focus{
+    color: #5f8700;
+}
+.content-main ion-item .item-pin{
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    right: 0.1in;
+    text-align: right;
+    direction: rtl;
+}
+.content-main ion-item .item-pin *{
+    vertical-align: middle;
+}
+.content-main ion-item .item-pin .item-pin-top{
+    height: 0.21in;
+    line-height: 0.17in;
+}
+.content-main ion-item .item-pin .item-pin-bottonm{
+    height: 0.21in;
+    line-height: 0.14in;
+}
+.content-main ion-item .item-pin .small{
+    font-size: 0.12in;
+}
+.content-main ion-item .item-pin .middle{
+
+}
+.content-main ion-item .item-pin img{
+    width: 0.18in;
+}
+.menubar{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 73px;
+}
+
+.menubar >.wrapper{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+.menubar .weather{
+    padding-bottom: 26px;
+    position: relative;
+}
+.menubar .weather >.wrapper >*, .menubar .weather .pin *{
+    vertical-align: middle;
+}
+.menubar .weather >.wrapper{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+.weather-status{
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+}
+.menubar .weather-status{}
+.menubar .weather .pin{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+}
+.menubar .menubar-con{
+    height: 100%;
+    margin-top: -26px;
+    position: relative;
+    padding-top: 26px;
+}
+
+.menubar .menubar-con .wrapper{
+    width: 100%;
+    height: 100%;
+}
+.menubar .menubar-con .button{
+    height: 100%;
+    display: inline;
+}
+.menubar .menubar-con img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+ion-header-bar{
+    background: linear-gradient(90deg, #7b7b7b, #8d8c8d, #9b9b9b) !important;
+    background: -webkit-linear-gradient(90deg, #7b7b7b, #8d8c8d, #9b9b9b) !important;
+    background: -moz-linear-gradient(90deg, #7b7b7b, #8d8c8d, #9b9b9b) !important;
+    height: 35px !important;
+    border: 0px !important;
+}
+.bar .title{
+    text-align: left;
+    color: rgb(251,251,251);
+    font-size: 18px !important;
+    line-height: 35px !important;
+    height: 35px !important;
+}
+.has-header{
+    top: 35px;
+}
+ion-modal-view.modal{
+    background: black;
+    color: #cbcbcb;
+    font-size: 18px;
+}
+#info_modal ion-content{
+    padding: 10px 10px;
+}
+.primary-text{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 35px;
+    margin: 0px;
+    padding: 5px;
+    line-height: 25px;
+}
+#payment_modal .content{
+    top: 95px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#payment_modal .main{
+    height: 100%;
+    width: 77%;
+    float: left;
+    position: relative;
+}
+#payment_modal .side-right{
+    height: 100%;
+    width: 23%;
+    float: left;
+    text-align: center;
+}
+
+#payment_modal .side-right .button{
+    width: 90%;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    padding: 0px;
+    line-height: 37px;
+}
+#payment_modal ion-content{
+    top: 0px;
+}
+#payment_modal ion-item{
+    text-align: left;
+    line-height: 50px;
+}
+#payment_edit_modal .text-title{
+    margin: 0;
+    padding: 10px 5px;
+    font-size: 18px;
+}
+.input-line{
+    line-height: 60px;
+    height: 60px;
+    padding: 0 0 0 10px;
+}
+.input-line:after{
+    clear: both;
+    display: block;
+    content: "";
+}
+.input-line input, .input-line .button{
+    display: inline-block;
+    width: 65%;
+    margin-left: 10px;
+    height: 40px;
+    float: left;
+    margin-top: 10px;
+}
+.input-line .button{
+    line-height: 40px;
+}
+.input-line .input-line-text{
+    display: inline-block;
+    width: 20%;
+    float: left;
+    white-space: nowrap;
+}
+.input-line .input-line-value{
+    margin-left: 10px;
+}
+.input-line *{
+    vertical-align: middle !important;
+}
+.action-line{
+    padding: 30px 10px 20px 10px;
+}
+.action-line:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+.action-line .line-action-left{
+    float: left;
+}
+.action-line .line-action-right{
+    float:right;
+}
+.primary-modal-button{
+    position: absolute;
+    width: 100%;
+}
+#exam-condition_modal .primary-modal-button{
+    top: 70px;
+}
+#exam-condition_modal ion-content{
+    top: 114px;
+}
+.exam-condition-item{
+    background: transparent;
+    border: 0px;
+    padding: 20px 5px;
+}
+.exam-condition-item-content{
+}
+.preface{
+    color: white !important;
+    font-size: 18px !important;
+    margin: 0px !important;
+    padding: 5px 2px;
+    white-space: normal !important;
+}
+.preface-detail{
+    white-space: normal !important;
+    font-size: 18px !important;
+    line-height: 24px;
+    color: #5f8700 !important;
+}
+
+.exam-condition-item .app-button-checkbox{
+    float: left;
+}
+
+.exam-condition-item-content{
+    padding-left: 35px;
+}
+
+#exam-theory_modal [mean=date]{
+    top: 35px;
+    width: 115px;
+    margin: 4px;
+    height: 40px;
+    line-height: 40px;
+}
+#theory-action-bar{
+    top: 83px;
+    position: absolute;
+    padding: 4px 0;
+    width: 100%;
+    display: table;
+}
+#theory-action-bar > *{
+    display: table-cell;
+    padding: 0 4px;
+    border: 0px;
+}
+
+#theory-action-bar >div >*{
+    width: 100%;
+}
+
+#theory-action-bar .main{
+    width: 100px;
+}
+#theory-action-bar .tail{
+    width: 30px;
+}
+#exam-theory_modal ion-content{
+    top: 140px;
+}
+#exam-theory_modal .theory-item{
+    text-align: left;
+    line-height: 50px;
+}
+#exam-theory_modal .theory-item .pin{
+    float: right;
+}
+.label-line{
+    padding: 0 10px;
+    line-height: 60px;
+    margin: 0px;
+}
+#adk_modal .primary-modal-button{ padding: 4px; top:35px; }
+#adk_modal .primary-modal-button .button{ width: 100%;}
+#adk_modal ion-content{ top: 87px; bottom: 52px; }
+#adk_modal ion-item{     
+    width: 100%;
+    text-align: left;
+    white-space: normal;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 5px 10px 7px 15px;
+}
+#adk_modal ion-item.header{
+    background: linear-gradient( 90deg, #676767, #888888, #aaaaaa);
+    background: -webkit-linear-gradient( 90deg, #676767, #888888, #aaaaaa);
+    background: -moz-linear-gradient( 90deg, #676767, #888888, #aaaaaa);
+    font-size: 25px;
+    line-height: 30px;
+    padding: 5px 4px;
+
+}
+#adk_modal ion-item.header.activated{
+    color: #323232;
+
+}
+
+#adk_modal ion-item.checkedplus{
+    background: linear-gradient( 90deg, #293b00, #374f00, #436000 );
+    background: -webkit-linear-gradient( 90deg, #293b00, #374f00, #436000 );
+    background: -moz-linear-linear-gradient( 90deg, #293b00, #374f00, #293b00 );
+    border-top: 1px solid #293b00;
+    border-bottom: 1px solid #293b00;
+}
+#adk_modal ion-item.checkedplus:before{
+    content: "+";
+}
+
+#adk_modal ion-item.checkedminus{
+    background: linear-gradient( 90deg, #a50014, #d20019, #fd001f);
+    background: -webkit-linear-gradient( 90deg, #a50014, #d20019, #fd001f);
+    background: -moz-linear-gradient( 90deg, #a50014, #d20019, #fd001f);
+    border-top: 1px solid #f5021f;
+    border-bottom: 1px solid #860817;
+}
+#adk_modal ion-item.checkedminus:before{
+    content: "-";
+}
+#adk_modal ion-item.activated{
+    color: #323232 !important;
+}
+#adk_modal .action-line{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 4px;
+    text-align: center;
+}
+.ride-top-line{
+    padding: 4px !important;
+    height: 48px;
+    line-height: 48px;
+    display: table;
+    width: 100%;
+}
+.ride-top-line .date{
+    margin: 0px;
+    width: 30%;
+    display: table-cell;
+}
+.ride-top-line .date .button{
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    margin: 0;
+}
+.ride-top-line .name{
+    display: table-cell;
+    width: auto;
+    margin: 0;
+    padding-left: 8px;
+}
+.ride-top-line .name .button{
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    margin: 0;
+}
+#ride_modal .label-line{
+    padding: 5px 4px 0 4px;
+    font-size: 18px;
+    line-height: 40px;
+}
+#ride_modal .input-line{
+    padding: 0 4px;
+    line-height: 35px;
+    height: 40px;
+}
+#ride_modal .input-line.date{
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    height: 40px;
+    line-height: 35px;
+}
+#ride_modal .input-line.date div{
+    display: table-cell;
+    padding: 0 4px;
+}
+#ride_modal .input-line.date >div>*{
+    width: 100%;
+    margin: 0;
+}
+#ride_modal .input-line.date .ap{
+    width: 75px;
+}
+#ride_modal .input-line.category{
+    margin-top: 8px;
+}
+#ride_modal .input-line.category .button{
+    width: 100%;
+    margin: 0px;
+}
+#ride_modal .input-line.ride input{
+    margin: 0;
+    width: 100%;
+}
+#call_modal .text-title {
+    margin: 0;
+    padding: 10px 5px;
+    font-size: 18px;
+}
+.line-full{
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+}
+.line-full >*{
+    display: table-cell;
+    padding: 4px;
+}
+#call_modal .line-full{
+}
+#call_modal .line-full .button{
+    width: 100%;
+}
+#call_modal .sms-edit, #call_modal .call-edit{
+    width: 33%;
+}
+#call_modal .sms-call{
+    width: 70px;
+}
+.modal.full-modal{
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+}
+.full-line{
+    width: 100%;
+    margin: 8px 0;
+}
+.table-line{
+    display: table;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.table-line *{
+    vertical-align: top;
+}
+.table-line >*{
+    display: table-cell;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table-line >* >*{
+    width: 100%;
+}
+#new_event_modal .table-line >*{
+    padding: 0 4px;
+    margin: 0px;
+    height: 0.46in;
+}
+
+#new_event_modal .table-line >* >*{
+    height: 0.46in;
+}
+
+#new_event_modal .day .date{
+    width: 1.2in;
+}
+#new_event_modal .day .time{
+    width: 0.8in;
+}
+#new_event_modal .day .duration input{
+    width: 0.5in;
+}
+#new_event_modal .day .duration *{
+    height: 100%;
+    vertical-align: middle;
+    text-align: right;
+}
+#new_event_modal .name .name-prefix{
+    width: 1in;
+}
+.full-line.action-line .line-action-left{
+    margin-left: 4px !important;
+}
+.full-line.action-line .line-action-right{
+    margin-right: 4px !important;
+}
+#register_theory_modal .table-line >* {
+    padding: 0 4px;
+    margin: 0px;
+    height: 0.46in;
+    white-space: nowrap;
+}
+#register_theory_modal .name .name-prefix {
+    width: 1in;
+}
+#register_theory_modal .name .name-menu >a{
+    width: 0.4in;
+    margin: 0 0.01in;
+}
+#register_theory_modal .name .name-menu >a img{
+    max-width: 100%;
+}
+#register_theory_modal .name .name-menu{
+    width: 1.36in;
+    line-height: 0.43in;
+}
+#register_theory_modal .table-line >* >* {
+    height: 0.46in;
+}
+#register_theory_modal .day .date-time{
+    width: 1.6in;
+    line-height: 0.46in;
+}
+#register_theory_modal .day .duration input{
+    width: 0.5in;
+}
+#register_theory_modal .day .duration *{
+    height: 100%;
+    vertical-align: middle;
+    text-align: right;
+}
+#sign_modal .sign-line{
+    line-height: 0.25in;
+    height: 0.25in;
+    font-size: 0.2in;
+}
+#sign_modal .top{
+    padding: 0 4px;
+    position: relative;
+}
+
+#sign_modal .top .pin{
+    position: absolute;
+    top: 0px;
+    right: 0.1in;
+}
+#sign_modal .top .pin .check-item{
+    line-height: 0.5in;
+}
+
+#sign_modal .top .pin .check-item .app-button-checkbox{
+    vertical-align: middle;
+}
+
+#sign_modal .container{
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+#sign_modal .bottom{
+    position: absolute;
+    top: 1in;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#sign_modal .bottom .table-line{
+    width: 100%;
+    height: 100%;
+}
+#sign_modal .bottom .button-area{
+    width: 1.4in;
+    vertical-align: bottom;
+    padding: 0 0.15in;
+}
+#sign_modal .bottom .button-area .button{
+    margin: 0.05in 0;
+}
+#signature{
+    background: rgb(239,239,239);
+    height: 100%;
+    border-radius: 5px;
+}
+#signatureparent {
+    color:darkblue;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    padding-top: 0.15in;
+}
+
+#signatureparent canvas{
+    border-radius: 5px;
+}
+
+#other_activity_modal .table-line >* {
+    padding: 0 4px;
+    margin: 0px;
+    height: 0.46in;
+}
+
+#other_activity_modal .table-line >* >* {
+    height: 0.46in;
+}
+
+#other_activity_modal .day .duration * {
+    height: 100%;
+    vertical-align: middle;
+    text-align: right;
+}
+#other_activity_modal .day .duration input {
+    width: 0.5in;
+}
+
+#other_activity_modal .day .date {
+    width: 2in;
+}
+.content-main ion-item .desc{
+    display: inline-block;
+    height: 39px;
+    margin-left: 5px;
+}
+
+.content-main ion-item .desc .desc-top{
+    height: 50%;
+    font-size: 0.15in;
+    line-height: 19px;
+}
+
+.content-main ion-item .desc .desc-bottom{
+    height: 50%;
+    font-size: 0.15in;
+    line-height: 19px;
+    visibility: hidden;
+}
+
+#other_activity_edit_modal .container{
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 4px 0;   
+}
+#other_activity_edit_modal .table-line >* {
+    padding: 0 4px;
+    margin: 0px;
+    height: 0.46in;
+}
+#other_activity_edit_modal .prefix-line{
+    margin: 0;
+    font-size: 0.2in;
+    padding: 0 4px;
+    line-height: 0.2in;
+}
+
+#other_activity_edit_modal .container ion-content{
+    top: 125px;
+    bottom: 112px;
+}
+
+#other_activity_edit_modal .action-line{
+    display: block;
+    text-align: center;
+    padding: 0px;
+    height: 44px;
+}
+
+#other_activity_edit_modal .action-line .line-action-center{
+
+}
+
+#other_activity_edit_modal .action-line >*{
+    display: inline-block;
+}
+#other_activity_edit_modal .suffix-line{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#other_activity_edit_modal .name .name-prefix{
+    width: 1in;
+}
+
+#other_activity_edit_modal .name .name-menu{
+    width: 0.5in;
+}
+.oae-item{
+    height: 0.5in;
+    background: black;
+    border-color: rgb(25,25,25);
+    line-height: 0.5in;
+    color: white;
+    padding: 0 0.1in;
+}
+
+.oae-item .app-button-checkbox{
+    position: absolute;
+    top: 50%;
+    right: 0.2in;
+    margin-top: -15px;
+}
+.oae-item.activated{
+    background-color: rgb(254,190,37);
+    border: rgb(25,25,25);
+}

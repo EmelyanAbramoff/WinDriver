@@ -1,0 +1,16 @@
+<ion-modal-view id="exam-condition_modal" class="full-modal" >
+    <ion-header-bar>
+        <h1 class="title">Prüfungs Voraussetzungen</h1>
+    </ion-header-bar>
+    <p class="text-title primary-text">Anhalter, Antonia</p>
+    <a class="button app-button-default dropdown primary-modal-button">B</a>
+    <ion-content>
+        <ion-item ng-repeat="item in test.items"  class="exam-condition-item" >
+            <div class="button app-button-checkbox" ng-class="{checked: item.checked }" ng-click="item.checked=!item.checked" ><span class="mark"></span></div>
+            <div class="exam-condition-item-content"><!--
+                --><p class="preface">Theoreunterrichte vollstanig</p><!--
+                --><p class="preface-detail">Grundunterricht 12 von 12 Doppelstunden<br> Zusatzuntericht 2 von 2 <br>Doppelstunden</p>
+            </div>
+        </ion-item>
+    </ion-content>
+</ion-modal-view>

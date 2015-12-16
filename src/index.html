@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title></title>
+
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+        <link href="css/ionic.app.css" rel="stylesheet">
+        -->
+
+        <script src="lib/jquery.js"></script>
+
+        <script src="lib/jSignature/src/jSignature.js"></script>
+        <script src="lib/jSignature/src/plugins/jSignature.CompressorBase30.js"></script>
+        <script src="lib/jSignature/src/plugins/jSignature.CompressorSVG.js"></script>
+        <script src="lib/jSignature/src/plugins/jSignature.UndoButton.js"></script> 
+        <script src="lib/jSignature/src/plugins/signhere/jSignature.SignHere.js"></script> 
+
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+        <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="cordova.js"></script>
+
+        <!--<script src="lib/jSignatureDirective.js"></script>-->
+
+        <!-- your app's js -->
+        <script src="js/app.js"></script>
+
+        <script src="js/controller.js"></script>
+
+    </head>
+    <body ng-app="starter" ng-controller="AppCtrl" >
+        <ion-pane>
+            <div class="toolbar-category">
+                <div class="toolbar-category-item main"><div class="button-con"><a class="button app-button-default dropdown">alle</a></div></div>
+                <div class="toolbar-category-item middle"><div class="button-con"><a class="button app-button-default dropdown">Anhalter, Antonia</a></div></div>
+                <div class="toolbar-category-item info"><div class="button-con" ng-click="open_info()" ><a class="button app-button-icon"><img src="img/info.png" /></a></div></div>
+            </div>
+            <div class="toolbar-day">
+                <ion-scroll direction="x"  class="available-scroller" delegate-handle="toolbar-day-scroll" >
+                    <ion-item collection-repeat="item in test.items"  item-height="100%" >
+                        <div class="toolbar-day-item button app-button-default" ng-click="on_clck_toolbar_day_item(item)">Mon 13.07</div>
+                    </ion-item>
+                </ion-scroll>
+            </div>
+            <ion-content class="content-main">
+                <ion-item collection-repeat="item in test.items"  class="app-button-black button" on-hold="on_hold_time(item)" >
+                    Mon 13.07
+                    <div class="desc">
+                        <div class="desc-top color-white">
+                            <span ng-if="item.app_data.status!=0&&item.app_data.status!=4">Anhalter, Antonia <span class="color-blue">B</span></span>
+                            <span ng-if="item.app_data.status==4">Theorieunterricht</span>
+                        </div>
+                        <div ng-class="{visible: item.app_data.status==4}" class="desc-bottom color-gray">Grundunterricht, Keine Angabe</div>
+                    </div>
+                    <div class="item-pin">
+                        <div class="item-pin-top">
+                            <img ng-if="item.app_data.status==3&&item.driving_flag.paied" src="./img/status_bezahlt.png" alt="">
+                            <img ng-if="item.app_data.status==3&&!item.driving_flag.reserve&&!item.driving_flag.ever_fail_hour" src="./img/status_unterschrieben.png" alt="">
+                            <span ng-if="item.app_data.status!=0" class="small">45</span>
+                        </div>
+                        <div class="item-pin-bottonm">
+                            <img ng-if="item.app_data.status==4 || (item.app_data.status==3&&!item.driving_flag.reserve)" src="./img/status_uebertragen.png" alt="">
+                            <img ng-if="item.app_data.status==3&&item.driving_flag.reserve" src="./img/status_vorgemerkt.png" alt="">
+                            <span ng-if="item.app_data.status!=0&&item.app_data.status!=4&&!item.driving_flag.ever_fail_hour" class="middle color-silver">Üst</span>
+                            <span ng-if="item.app_data.status!=0&&item.driving_flag.ever_fail_hour" class="middle color-silver">Fehl</span>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-content>
+            <div class="menubar">
+                <div class="wrapper">
+                    <div class="weather">
+                        <div class="wrapper"><!--
+                            --><img class="weather-status" src="img/sun.png" /><!--
+                            --><span class="color-gold">&nbsp;&nbsp;05:43</span>
+                            <div class="pin"><!--
+                                --><span class="color-silver">GZ: 0 FZ: 0</span><!--
+                                --><span class="color-gold">&nbsp; 21:24 &nbsp;</span><!--
+                                --><img class="weather-status" src="img/moon.png" style="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menubar-con">
+                        <div class="wrapper">
+                            <a class="button app-button-icon" ng-click="open_payment()"><img src="img/paid.png"/></a>
+                            <a class="button app-button-icon" ng-click="open_exam()"><img src="img/test.png"/></a>
+                            <a class="button app-button-icon" ng-click="open_adk()"><img src="img/adk.png"/></a>
+                            <a class="button app-button-icon"><img src="img/theory.png"/></a>
+                            <a class="button app-button-icon" ng-click="open_ride()" ><img src="img/logbook.png"/></a>
+                            <a class="button app-button-icon" ng-click="open_call()"><img src="img/phone.png"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-pane>
+    </body>
+</html>

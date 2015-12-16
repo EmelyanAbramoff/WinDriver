@@ -1,0 +1,20 @@
+<ion-modal-view id="payment_modal" class="full-modal">
+    <ion-header-bar>
+        <h1 class="title">Zahlungen</h1>
+    </ion-header-bar>
+    <p class="primary-text">Anhalter, Antonia<br>Saldo: <span class="color-red bold">€6.00</span></p>
+    <div class="content">
+        <div class="main">
+            <ion-content>
+                <ion-item class="app-button-black button color-silver" collection-repeat="item in test.items" item-width="100%" item-height="50px">
+                    <span ng-bind="item.text"></span>
+                </ion-item>
+            </ion-content>
+        </div>
+        <div class="side-right">
+            <a class="button app-button-default" ng-click="open_payment_edit()">Neu</a>
+            <a class="button app-button-default">Andern</a>
+            <a class="button app-button-default">Loschen</a>
+        </div>
+    </div>
+</ion-modal-view>

@@ -1,0 +1,16 @@
+<ion-modal-view id="adk_modal" class="full-modal">
+    <ion-header-bar>
+        <h1 class="title">adk für Berger, Benedict</h1>
+    </ion-header-bar>
+    <div class="primary-modal-button"><a class="button app-button-default dropdown">A1</a></div>
+    <ion-content>
+        <ion-item ng-class="{header:item.header, checkedplus:(item.status==1), checkedminus:(item.status==2) }" class="app-button-black button color-silver" ng-repeat="item in test.items" on-hold="item.status=( item.header?item.status:item.status==0?item.status=1:item.status==1?item.status=2:item.status=0)" >
+            {{item.text}}
+        </ion-item>
+    </ion-content>
+    <div class="action-line">
+        <a class="button app-button-default line-action-left" ng-click="close_adk()" >Speichern</a>
+        <a class="button app-button-default line-action-center" ng-click="adk_force_plus_all()" >Alle markieren</a>
+        <a class="button app-button-default line-action-right" ng-click="close_adk()">Abbrechen</a>
+    </div>
+</ion-modal-view>

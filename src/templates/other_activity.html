@@ -1,0 +1,29 @@
+<ion-modal-view id="other_activity_modal" class="full-modal">
+    <ion-header-bar>
+        <h1 class="title">Neue sonstige Tätigkeit</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="full-line table-line day">
+            <div class="date" ><a class="button app-button-default">06.08.2015, 11:45</a></div>
+            <div class="duration" >
+                <div>
+                    <input class="app-input-default" value="45" />
+                    <span >min</span>
+                </div>
+            </div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><a class="button app-button-default dropdown">Theorieunterricht</a></div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><a class="button app-button-default dropdown">Grundunterricht</a></div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><a class="button app-button-default dropdown">Keine Angabe</a></div>
+        </div>
+        <div class="full-line table-line action-line">
+            <a class="button app-button-default line-action-left" ng-click="create_other_activity()" >Speichern</a>
+            <a class="button app-button-default line-action-right" ng-click="close_other_activity()">Abbrechen</a>
+        </div>
+    </ion-content>
+</ion-modal-view>

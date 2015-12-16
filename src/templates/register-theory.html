@@ -1,0 +1,42 @@
+<ion-modal-view id="register_theory_modal" class="full-modal">
+    <ion-header-bar>
+        <h1 class="title">Fahrstunde eintragen</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="full-line table-line day">
+            <div class="date-time" >11.08.2015, 15:30</div>
+            <div class="duration" >
+                <div>
+                    <input class="app-input-default" value="45" />
+                    <span >min</span>
+                </div>
+            </div>
+        </div>
+        <div class="full-line table-line name">
+            <div class="name-prefix"><a class="button app-button-default dropdown">alle</a></div>
+            <div class="name-suffix"><a class="button app-button-default dropdown">Anhalter, Antonia, B</a></div>
+            <div class="name-menu"><!--
+                --><a class="button app-button-icon" ng-click="open_payment()"><img src="img/info.png"/></a><!--
+                --><a class="button app-button-icon" ng-click="open_adk()"><img src="img/adk.png"/></a><!--
+                --><a class="button app-button-icon" ng-click="open_call()"><img src="img/phone.png"/></a>
+            </div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><a class="button app-button-default dropdown">B</a></div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><a class="button app-button-default dropdown">Übungsstunde</a></div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><a class="button app-button-default dropdown">Golf</a></div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><a class="button app-button-default dropdown">Ausbildungsstuf auswählen</a></div>
+        </div>
+        <div class="full-line table-line action-line">
+            <a class="button app-button-default line-action-left" ng-click="create_register_theory()" >Speichern</a>
+            <a class="button app-button-default line-action-center" ng-click="open_sign()" >Unterschreiben</a>
+            <a class="button app-button-default line-action-right" ng-click="close_register_theory()">Abbrechen</a>
+        </div>
+    </ion-content>
+</ion-modal-view>

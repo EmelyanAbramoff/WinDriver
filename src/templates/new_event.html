@@ -1,0 +1,34 @@
+<ion-modal-view id="new_event_modal" class="full-modal">
+    <ion-header-bar>
+        <h1 class="title">Neuer Termin</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="full-line table-line day">
+            <div class="date" ><a class="button app-button-default">06.08.2015</a></div>
+            <div class="time" ><a class="button app-button-default">13:15</a></div>
+            <div class="duration" >
+                <div>
+                    <input class="app-input-default" value="45" />
+                    <span >min</span>
+                </div>
+            </div>
+        </div>
+        <div class="full-line table-line name">
+            <div class="name-prefix"><a class="button app-button-default dropdown">alle</a></div>
+            <div class="name-suffix"><a class="button app-button-default dropdown">Anhalter, Antonia, B</a></div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><a class="button app-button-default dropdown">B</a></div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><a class="button app-button-default dropdown">Übungsstunde</a></div>
+        </div>
+        <div class="full-line table-line">
+            <div class=""><input class="app-input-default"></div>
+        </div>
+        <div class="full-line table-line action-line">
+            <a class="button app-button-default line-action-left" ng-click="create_new_event()" >Speichern</a>
+            <a class="button app-button-default line-action-right" ng-click="close_new_event()">Abbrechen</a>
+        </div>
+    </ion-content>
+</ion-modal-view>

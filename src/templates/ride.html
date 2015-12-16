@@ -1,0 +1,33 @@
+<ion-modal-view id="ride_modal" class="full-modal">
+    <ion-header-bar>
+        <h1 class="title">Fahrten erfassen</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="input-line ride-top-line"><!--
+            --><div class="date"><a class="button app-button-default ">29.07.2015</a></div><!--
+            --><div class="name"><a class="button app-button-default dropdown ">Muster, Sabine</a></div>
+        </div>
+        <div class="label-line clearfix">
+            <span class="left">Kim.Stand-AnfangArt</span>
+            <span class="right">Kim.Stand-Ende</span>
+        </div>
+        <div class="input-line date">
+            <div class="start"><input class="input-line-input app-input-default" type="text" value="0" /></div>
+            <div class="ap"><a class="button app-button-default dropdown">G</a></div>
+            <div class="end"><input class="input-line-input app-input-default" type="text" value="0" /></div>
+        </div>
+        <div class="input-line category">
+            <a class="button app-button-default dropdown ">Golf</a>
+        </div>
+        <div class="label-line clearfix">
+            <span class="left">Fahrtziel, Strecke, Zweck</span>
+        </div>
+        <div class="input-line ride">
+            <input class="input-line-input app-input-default" type="text" value="" />
+        </div>
+        <div class="action-line">
+            <a class="button app-button-default line-action-left" ng-click="close_ride()" >Speichern</a>
+            <a class="button app-button-default line-action-right" ng-click="close_ride()">Abbrechen</a>
+        </div>
+    </ion-content>
+</ion-modal-view>
